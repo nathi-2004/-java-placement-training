@@ -1,14 +1,23 @@
 import java.util.*;
 class Main {
-    public static void main (String[] args) {
-       int a=7;
-       for(;;)
-       {
-           if(a>3)
-           System.out.println(a);
-           else 
-                 break;
-                a--;
-       }
-    }
+	public static void main (String[] args) {
+		{
+		    int n=4;
+		  
+		    for(int i=1;i<=n;i++)
+		    {
+		        for(int j=n-1;j>=i;j--)
+		        {
+		            System.out.print(" ");
+		          
+		        }
+		        for(int k=1;k<=i;k++)
+		        {
+		            System.out.print("1");
+		        }
+		        System.out.println();
+		    }
+		}
+	}
 }
+	
