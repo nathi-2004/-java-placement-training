@@ -1,16 +1,31 @@
-class Main
-    {
-public static void main(String args[])
-{
-    byte a=100;
-    byte b=98;
-    byte c=(byte)(a+b);
-    System.out.println("sum:"+ c);
-    byte d=(byte)(a-b);
-    System.out.println("Difference:"+ d);
-    byte e=(byte)(a*b);
-    System.out.println("Multiplication:"+ e);
-    byte f=(byte)(a/b);
-    System.out.println("Division:"+ f);
-    }
-    }
+import java.util.*;
+class Main {
+	public static void main (String[] args) {
+		{
+			Scanner in=new Scanner(System.in);
+			int n=in.nextInt();
+			int sum=0;
+			while(n>0)//123456
+			{
+				int digit=n%10;/6
+				n=n/10;//12345
+				if(digit%2==0)
+				{
+				sum+=digit;
+					System.out.println(digit);
+
+				}
+				
+
+			}
+			System.out.println(sum);
+		}
+	}
+}
+
+
+
+
+
+
+
