@@ -1,15 +1,17 @@
-class Main{
-    public static void main (String[] args) {
-    {
-        int x=10;
-       int  v=--x + x++ + ++x + --x + x++;
-    int z=x++ + ++x + ++x + x++ + ++x;
-    int a=--x + --x + --x + --x;
-    System.out.println(v);
-     System.out.println(z);
-     System.out.println(a);
-    
-    }
+import java.util.*;
+class Main {
+	public static void main (String[] args) {
+		{
+		    int n=5;
+		    for(int i=1;i<=n;i++)
+		    {
+		        for(int j=1;j<=i;j++)
+		        {
+		            System.out.print("1 ");
+		        }
+		        System.out.println();
+		    }
+		}
+	}
 }
-
-}
+			
