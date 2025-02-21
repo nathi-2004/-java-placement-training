@@ -1,31 +1,28 @@
-import java.util.*;
-class Main {
-	public static void main (String[] args) {
-		{
-			Scanner in=new Scanner(System.in);
-			int n=in.nextInt();
-			int sum=0;
-			while(n>0)//123456
-			{
-				int digit=n%10;/6
-				n=n/10;//12345
-				if(digit%2==0)
-				{
-				sum+=digit;
-					System.out.println(digit);
-
-				}
-				
-
-			}
-			System.out.println(sum);
-		}
-	}
+class Copy
+{
+     String name;
+     int id;
+     Copy(String n,int i)
+     {
+         this.name=n;
+         this.id=i;
+     }
+     Copy(Copy s)
+     {
+         name=s.name;
+         id=s.id;
+     }
+     void display()
+     {
+         System.out.println(name+" "+id);
+     }
+}class Main{
+    public static void main(String args[])
+    
+    {
+        Copy a=new Copy("nathi",133);
+Copy b=new Copy(a);
+a.display();
+b.display();
+    }
 }
-
-
-
-
-
-
-
