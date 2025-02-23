@@ -1,6 +1,6 @@
 
 import java.util.*;
-class Add{
+class OBJVALUES{
     public int a,b,c;
     
  
