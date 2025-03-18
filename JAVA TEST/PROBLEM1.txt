@@ -1,0 +1,35 @@
+class Solution {
+    public static int lengthOfLongestSubstring(String s) {
+        char charArray[] = s.toCharArray();
+        int longest = 0;
+
+        for (int i = 0; i < charArray.length; i++) {
+            int count = 0;
+            for (int j = i; j < charArray.length; j++) {
+                if (isDuplicate(charArray, i, j)) { 
+                    break; 
+                }
+                count++; 
+                if (count > longest) { 
+                    longest = count; 
+                }
+            }
+        }
+        return longest;
+    }
+
+    public static boolean isDuplicate(char arr[], int start, int end) {
+        for (int i = start; i < end; i++) { 
+            if (arr[i] == arr[end]) { 
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcabcbb")); 
+        System.out.println(lengthOfLongestSubstring("bbbbb"));    
+        System.out.println(lengthOfLongestSubstring("pwwkew"));   
+    }
+}
