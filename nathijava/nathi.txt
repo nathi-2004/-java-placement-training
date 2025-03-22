@@ -1,0 +1,274 @@
+import java.util.Arrays;
+public class Insert_element_array {
+    public static void main(String args[])
+    {
+        //Program to insert a element in specific index of an array
+        int[] a = {10,20,30,40,50,60,70,80,90,100};
+        int index = 2;
+        int value = 55;
+        System.out.println("Before Insert "+Arrays.toString(a) );
+ 
+        for(int i=a.length-1;i>index;i--)
+        {
+            a[i]=a[i-1];
+        }
+        a[index]=value;
+        System.out.println("After Insert "+Arrays.toString(a) );
+    }
+}
+
+
+public class duplicate_array {
+    public static void main(String args[]) {
+        //Write a program to print the duplicate element in an array
+        int[] a = {1, 2, 5, 5, 6, 6, 7, 2};
+ 
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = i + 1; j < a.length; j++)
+            {
+                if ((a[i] == a[j]) && (i != j)) {
+                    System.out.println("Duplicate Element : " + a[j]);
+                }
+            }
+        }
+ 
+    }
+    
+    
+    import java.util.Scanner;
+//Write a program to find the fibonacci series of given number.
+public class Fibonacci {
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter The Number : ");
+        int n=in.nextInt();//5
+        int a=-1,b=1,c;
+        for(int i=1;i<=n;i++)//1<=5 2<=5 3<=5 4<=5  5<=5  6<=5
+        {
+            c=a+b;//-1+1=>0  1+0=>1  0+1=1  1+1=2  1+2=3
+            System.out.println(c); //0  1  1 2  3
+            a=b;//1 0  1  1  2
+            b=c;//0 1  1  2  3
+        }
+    }
+}
+import java.util.Arrays;
+ 
+public class ascendingOrder {
+    public static void main(String args[])
+    {
+        // Ascending order
+        int[] a = new int[]{8, 2, 9, 7, 33, 3, 87};
+        System.out.println("Before Sort : "+Arrays.toString(a));
+        int temp;
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=i+1;j<a.length;j++)
+            {
+                if(a[i]>a[j])
+                {
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        System.out.println("After Sort : "+Arrays.toString(a));
+    }
+}
+....................................................................
+public class Main {
+    public static void main(String args[]) {
+        // Initial array with duplicates
+        int[] a = {1, 2, 5, 5, 6, 6, 7, 2};
+
+        // Variable to track the new length of the array after removing duplicates
+        int length = a.length;
+
+        // Loop through the array to check for duplicates
+        for (int i = 0; i < length; i++) {
+            for (int j = i + 1; j < length; j++) {
+                // If a duplicate is found
+                if (a[i] == a[j]) {
+                    // Shift all elements after the duplicate left by one position
+                    for (int k = j; k < length - 1; k++) {
+                        a[k] = a[k + 1];
+                    }
+                    length--;  // Reduce the length of the array
+                    j--;  // Adjust the loop variable to check the current index again
+                }
+            }
+        }
+
+        // Print the unique elements in the array
+        System.out.print("Array after removing duplicates: ");
+        for (int i = 0; i < length; i++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
+....................................................
+class GfG {
+    public static void main(String[] args) {
+        int n = 58964;
+        int count = 0;
+
+        // Handle special case for 0
+        if (n == 0) {
+            count = 1;
+        } else {
+            // Iterate while n is greater than 0
+            while (n != 0) {
+                n = n / 10;  // Remove rightmost digit
+                count++;     // Increment digit count by 1
+            }
+        }
+
+        // Output the result (using print, without any function call)
+        System.out.print(count);  // Output: 5
+    }
+}..................................
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+    // Write a program to check whether the given 3-digit number is Armstrong or not
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter 3 Digit Number: ");
+        int number = in.nextInt(); // e.g., 153
+        int temp = number; // Store the original number
+        int sum = 0;
+        
+        // Loop to extract and process each digit
+        while (temp != 0) {
+            int digit = temp % 10;  // Get the last digit
+            sum += Math.pow(digit, 3); // Add the cube of the digit to the sum
+            temp = temp / 10;  // Remove the last digit
+        }
+
+        // Compare the result with the original number
+        if (number == sum) {
+            System.out.println(number + " is an Armstrong Number");
+        } else {
+            System.out.println(number + " is not an Armstrong Number");
+        }
+
+        // Close the scanner
+        in.close();
+    }
+}
+..............................................................................................................................
+import java.util.Scanner;
+
+public class GeometricProgression {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        // Input the first term, common ratio, and number of terms
+        System.out.print("Enter the first term (T1): ");
+        int firstTerm = in.nextInt(); // e.g., 3
+
+        System.out.print("Enter the common ratio (r): ");
+        int commonRatio = in.nextInt(); // e.g., 2
+
+        System.out.print("Enter the number of terms: ");
+        int numTerms = in.nextInt(); // e.g., 5
+
+        // Printing the terms of the geometric progression
+        System.out.println("The terms of the geometric progression are:");
+        
+        // Loop to calculate and print each term
+        int term = firstTerm;
+        for (int n = 1; n <= numTerms; n++) {
+            System.out.print(term + " ");  // Print the current term
+            term *= commonRatio;  // Calculate the next term
+        }
+
+        // Close the scanner
+        in.close();
+    }
+}
+..............................................................................
+import java.util.Scanner;
+
+public class DecimalToHexadecimal {
+    public static void main(String[] args) {
+        // Create a scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter a decimal number
+        System.out.print("Enter a decimal number: ");
+        int num = scanner.nextInt();
+
+        // Edge case: If the number is 0, its hexadecimal is "0"
+        if (num == 0) {
+            System.out.println("The hexadecimal equivalent is: 0");
+            return;
+        }
+
+        // Variable to store the reversed hexadecimal number
+        int rev = 0;
+        // Variable to store the current power of 10 (for placing hexadecimal digits)
+        int power = 1;
+        // Temporary variable for remainder (hex digit)
+        int d;
+
+        // Loop to convert the decimal number to hexadecimal
+        while (num > 0) {
+            d = num % 16;  // Get remainder (hex digit)
+            rev = rev + d * power;  // Build the reversed hexadecimal value
+            power = power * 10;  // Increase the power of 10
+
+            // Update the decimal number by dividing it by 16
+            num = num / 16;
+        }
+
+        // Now, reverse the value in 'rev' and convert to hexadecimal
+        System.out.print("The hexadecimal equivalent is: ");
+        while (rev > 0) {
+            d = rev % 10;  // Get the last digit
+            rev = rev / 10;  // Remove the last digit
+
+            // Convert the digit to its hexadecimal character and print it
+            if (d < 10) {
+                System.out.print(d);  // Print digits 0-9 directly
+            } else {
+                System.out.print((char) ('A' + (d - 10)));  // Convert 10-15 to A-F
+            }
+        }
+
+        System.out.println();  // Move to the next line after printing
+    }
+},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+import java.util.Scanner;
+
+public class CubeOfDigits {
+    public static void main(String[] args) {
+        // Create a Scanner object to take input from the user
+        Scanner scanner = new Scanner(System.in);
+        
+        // Ask the user to input a number
+        System.out.print("Enter a number: ");
+        int temp = scanner.nextInt();
+        
+        // Initialize a variable to hold the sum
+        int sum = 0;
+        
+        // Loop through each digit of the number
+        while (temp != 0) {
+            int digit = temp % 10;  // Get the last digit
+            sum += digit * digit * digit; // Add the cube of the digit to the sum
+            temp = temp / 10;  // Remove the last digit
+        }
+        
+        // Print the sum of cubes of digits
+        System.out.println("Sum of cubes of digits: " + sum);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
+
+
+

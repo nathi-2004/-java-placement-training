@@ -1,0 +1,27 @@
+public class Main{
+    public static void combination(int[] candidates, int target, int start, int[] currentCombination, int currentIndex) {
+        if (target == 0) {
+            for (int i = 0; i < currentIndex; i++) {
+                System.out.print(currentCombination[i] + " ");
+            }
+            System.out.println();
+            return;
+        }
+
+        if (target < 0) {
+            return;
+        }
+
+        for (int i = start; i < candidates.length; i++) {
+            currentCombination[currentIndex] = candidates[i];
+            combination(candidates, target - candidates[i], i, currentCombination, currentIndex+ 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] candidates = {2, 3, 6, 7};
+        int target = 7;
+        int[] currentCombination = new int[target];
+        combination(candidates, target, 0, currentCombination, 0);
+    }
+}
